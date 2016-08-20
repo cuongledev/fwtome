@@ -1,0 +1,53 @@
+@mixin transitionDelay($time)
+	transition: all $time linear 0s
+// font-family
+@font-face
+    font-family: Mobifone-Font;
+    src: url(../fonts/VIE-HandelGothic-Bold.ttf)
+
+// Color
+$mainColor: #277cbe
+
+$secondColor: #e13b3b
+
+$thirdColor: #f2b03f
+
+$textColor: #333
+
+a
+	color: $mainColor
+	@include transitionDelay(250ms)
+	&:hover
+		text-decoration: none
+		@include transitionDelay(250ms)
+
+h1, h2, h3, h4, h5 
+	margin: 0
+ul 
+	margin: 0 
+	padding: 0
+
+.navbar
+	margin-bottom: 0
+	li 
+		a:hover 
+			background: none
+.noPadding 
+	padding: 0
+
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] 
+	width: 100% !important
+
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus
+	background: none
+
+.breadcrumb
+	margin: 0
+	background: none
+.mgB20
+	margin-bottom: 20px
+
+@media screen and (max-width: 992px)
+	.row
+		margin: 0
+
