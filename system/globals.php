@@ -5,7 +5,7 @@ if (!isset($_web['lang'])) {
 	$_web['lang'] = 'vi';
 }
 
-$_web['base_url'] = 'http://localhost/3sproject_v1/';
+$_web['base_url'] = 'http://localhost/fwtome/';
 
 require_once "app/database.php";
 require_once "system/mysqliDB.php";
