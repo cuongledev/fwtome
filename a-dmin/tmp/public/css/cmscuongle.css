@@ -10,9 +10,14 @@
  * Core: General Layout Style
  * -------------------------
  */
-html,
-body {
+html{
   min-height: 100%;
+}
+body {
+    font-size: 13px;
+    position: relative;
+    min-height: 100%;
+    background: url("../images/bg.png") repeat;
 }
 .layout-boxed html,
 .layout-boxed body {
@@ -3242,7 +3247,7 @@ table.text-center th {
 }
 .login-logo a,
 .register-logo a {
-  color: #444;
+  color: #fff;
 }
 .login-page,
 .register-page {

@@ -13,7 +13,7 @@
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="<?php echo base_url();?>tmp/public/css/AdminLTE.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>tmp/public/css/cmscuongle.css">
   <link rel="stylesheet" href="<?php echo base_url();?>tmp/public/css/admin_login_custom.css">
   <!-- iCheck -->
   <link rel="stylesheet" href="<?php echo base_url();?>/tmp/public/plugins/iCheck/square/blue.css">
@@ -32,11 +32,11 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-wrapper">
-			    <form method="POST" action="<?php echo base_url();?>index.php?mod=login&controller=login&action=login" accept-charset="UTF-8"><input name="_token" type="hidden" value="">
+			    <form method="POST" action="" accept-charset="UTF-8"><input name="_token" type="hidden" value="">
 			    <div class="popup-header">
 			          <a href="#" class="pull-left"><i class="fa fa-user-secret" aria-hidden="true"></i></a>
 			        <span class="text-semibold">User Login</span>
-
+					
 			        <div class="btn-group pull-right">
 			            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cogs" aria-hidden="true"></i></a>
 			            <ul class="dropdown-menu icons-right dropdown-menu-right">
@@ -51,6 +51,17 @@
 
 			    </div>
 			    <div class="well">
+			    	<?php 
+					if (!empty($this->errors)) {
+						echo '<div class="alert alert-danger">
+							  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+							  <strong>Cảnh báo:</strong>';
+						foreach ($this->errors as $value) { 
+							echo '<p>'.$value.'</p>';
+						}
+						echo '</div>';
+					}
+					 ?>
 			        <div class="form-group has-feedback">
 			            <label>Email</label>
 			            <input class="form-control form-control-solid placeholder-no-fix" placeholder="Email" name="email" type="text">

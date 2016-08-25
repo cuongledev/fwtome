@@ -10,33 +10,37 @@ class LoginController extends Controller{
 	public function index(){
 		if (isset($_SESSION['id']) || isset($_SESSION['group_id'])) redirect(base_url());
 		$this->view->data  = $this->modelUser->getAll(1);
-		//$this->loadPages = 'index';
-		//$this->view('index',$data);
-		$this->view->render('index',false);
-	}
-	public function login(){
-
 		if ($this->isPost()==true) {
 			$email = $this->input->post('email');
 			$password = md5("lnc".$this->input->post('password'));
-			if ($this->modelUser->checkEmail($email) > 0) {
-				$user = $this->modelUser->checkLogin($email,$password);
-				if (!empty($user)) {
-					$data = array(
-						'id' 		=> $user['id'],
-						'email' 	=> $user['email'],
-						'username' 	=> $user['username'],
-						'group_id'	=> $user['group_id']
-					);
-					Session::create($data);
-					redirect(base_url()."index.php?mod=home&controller=home&action=index");
-				}else{
-					$this->errors[] = "Mật khẩu của bạn không chính xác.";
-				}
+			if ($email==null) {
+				$this->view->errors[] = "Bạn không được để email trống!";
+			}elseif ($password==null) {
+				$this->view->errors[] = "Bạn không đươc để mật khẩu trống!";
 			}else{
-				$this->errors[] = "Email của bạn không chính xác.";
+				if ($this->modelUser->checkEmail($email) > 0) {
+					$user = $this->modelUser->checkLogin($email,$password);
+					if (!empty($user)) {
+						$data = array(
+							'id' 		=> $user['id'],
+							'email' 	=> $user['email'],
+							'username' 	=> $user['username'],
+							'group_id'	=> $user['group_id']
+						);
+						Session::create($data);
+						redirect(base_url()."index.php?mod=home&controller=home&action=index");
+					}else{
+						$this->view->errors[] = "Mật khẩu của bạn không chính xác.";
+					}
+				}else{
+					$this->view->errors[] = "Email của bạn không chính xác.";
+				}
 			}
 		}
+		$this->view->render('index',false);
+	}
+	public function login(){
+		
 		
 	}
 	public function logout(){
