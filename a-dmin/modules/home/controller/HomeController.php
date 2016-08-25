@@ -7,11 +7,19 @@ class HomeController extends Controller{
 		$this->modelNews = $this->loadModel('Home');
 	}
 	public function index(){
-
-		$this->view->data  = $this->modelNews->getAll(1);
-		//$this->loadPages = 'index';
-		//$this->view('index',$data);
+		global $_web;
+		//$this->view->data  = $this->modelNews->getUserById(1);
 		$this->view->render('index');
+	}
+	public function setLang(){
+		$lang = $this->input->post('lang');
+		Session::create(array('lang'=> $lang));
+		$data = array(
+			'status' => true,
+			'mess'	 => 'Success'
+		);
+		
+		echo json_encode($data);
 	}
 
 	/*public function __destruct(){

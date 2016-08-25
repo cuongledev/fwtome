@@ -4,8 +4,8 @@
       <div class="dashboard-breadcrumb">
         <div class="pull-left">
             <ol class="breadcrumb">
-						<li><a href=""><i class="fa fa-home" aria-hidden="true"></i> Dashboard</a></li>
-						<li class="active">Dashboard</li>
+						<li><a href=""><i class="fa fa-home" aria-hidden="true"></i> <?php echo lang('dashboard'); ?></a></li>
+						<li class="active"><?php echo lang('dashboard'); ?></li>
 			</ol>
 
         </div>

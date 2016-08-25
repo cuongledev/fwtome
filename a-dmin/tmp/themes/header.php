@@ -18,8 +18,18 @@
           <!-- Messages: style can be found in dropdown.less-->
           <li class="dropdown messages-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <?php 
+            if ($_web['lang']=='vi') { ?>
+              <img src="<?php echo base_url();?>tmp/public/images/vi.png" alt="">
+              Vietnames
+            <?php 
+            }else{ ?>
               <img src="<?php echo base_url();?>tmp/public/images/us.png" alt="">
               English
+            <?php 
+            }
+            ?>
+              
               <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
@@ -27,7 +37,7 @@
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
                   <li><!-- start message -->
-                    <a href="#">
+                    <a href="javascript:;" class="lang_hd" data-lang="en">
                       <div class="pull-left">
                         <img src="<?php echo base_url();?>tmp/public/images/us.png" alt="">
                         English
@@ -36,7 +46,7 @@
                   </li>
                   <!-- end message -->
                   <li>
-                    <a href="#">
+                    <a href="javascript:;" class="lang_hd" data-lang="vi">
                       <div class="pull-left">
                         <img src="<?php echo base_url();?>tmp/public/images/vi.png" alt="">
                         Vietnames
@@ -52,7 +62,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="<?php echo base_url();?>tmp/public/images/avatar.png" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
+              <span class="hidden-xs"><?php echo Session::get('username'); ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -60,7 +70,7 @@
                 <img src="<?php echo base_url();?>tmp/public/images/avatar.png" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
+                  <?php echo Session::get('username'); ?> - Web Developer
                   <small>Member since Nov. 2012</small>
                 </p>
               </li>

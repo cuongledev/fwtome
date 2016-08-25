@@ -11,7 +11,7 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="<?php echo base_url()."tmp/public/";?>/css/AdminLTE.css">
+  <link rel="stylesheet" href="<?php echo base_url()."tmp/public/";?>/css/cmscuongle.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="<?php echo base_url()."tmp/public/";?>plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
   <link rel="stylesheet" href="<?php echo base_url()."tmp/public/";?>plugins/timepicker/bootstrap-timepicker.min.css">
@@ -22,6 +22,10 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+
+  <script type="text/javascript">
+    var baseUrl =  '<?php echo base_url();?>';
+  </script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -53,6 +57,7 @@
 <script type="text/javascript" src="<?php echo base_url()."tmp/public/";?>plugins/jQueryUI/jquery-ui.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script type="text/javascript" src="<?php echo base_url()."tmp/public/";?>js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url()."tmp/public/";?>js/cmscustom.js"></script>
 <!-- Bootstrap WYSIHTML5 -->
 <script type="text/javascript" src="<?php echo base_url()."tmp/public/";?>plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url()."tmp/public/";?>plugins/timepicker/bootstrap-timepicker.min.js"></script>
@@ -60,5 +65,6 @@
 <script type="text/javascript" src="<?php echo base_url()."tmp/public/";?>js/dashboard.js"></script>
 <script type="text/javascript" src="<?php echo base_url()."tmp/public/";?>js/app.js"></script>
 <script type="text/javascript" src="<?php echo base_url()."tmp/public/";?>js/demo.js"></script>
+
 </body>
 </html>

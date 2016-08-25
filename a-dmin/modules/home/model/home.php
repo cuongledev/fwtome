@@ -6,9 +6,9 @@ class Home{
 		$this->lang        = $_web['lang'];
 		$this->user     = new system\Model('user');
 	}
-	public function getAll($id){
+	public function getUserById($id){
 		$this->user->where('group_id',$id);
-		$result  = $this->user->get();
+		$result  = $this->user->getOne();
 		return $result;
 	}
 }

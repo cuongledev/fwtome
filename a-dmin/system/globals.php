@@ -1,9 +1,7 @@
 <?php 
 $_web = array();
 $_mod = null;
-if (!isset($_web['lang'])) {
-	$_web['lang'] = 'vi';
-}
+$_web['lang'] = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'vi';
 
 $_web['base_url'] = 'http://localhost/fwtome/a-dmin/';
 
@@ -51,10 +49,11 @@ if (isset($_web['lang'])) {
 $controller = new controller();
 $bootstraps = new bootstraps();
 
+
+
 /*echo "<pre>";
 print_r($controller);*/
-/*echo "<pre>";
-print_r($_web);*/
+
 
 
 // kiểm tra url có tên module ko, nếu chưa có trong phần khai báo module thì đặt mặc định nó là home và truyền vào biến Global
