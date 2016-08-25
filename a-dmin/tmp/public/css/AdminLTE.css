@@ -194,6 +194,7 @@ a:focus {
   position: relative;
   max-height: 100px;
   z-index: 1030;
+  background: #518ca3;
 }
 .main-header .navbar {
   -webkit-transition: margin-left 0.3s ease-in-out;
@@ -256,6 +257,7 @@ a:focus {
   background-image: none;
   padding: 15px 15px;
   font-family: fontAwesome;
+      color: #fff;
 }
 .main-header .sidebar-toggle:before {
   content: "\f0c9";
@@ -302,6 +304,7 @@ a:focus {
 }
 .main-header .logo .logo-lg {
   display: block;
+  color: #fff;
 }
 .main-header .logo .logo-mini {
   display: none;
@@ -426,6 +429,7 @@ a:focus {
   -moz-transition: -moz-transform 0.3s ease-in-out, width 0.3s ease-in-out;
   -o-transition: -o-transform 0.3s ease-in-out, width 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+      background-color: #3a4b55;
 }
 @media (max-width: 767px) {
   .main-sidebar,
@@ -469,8 +473,9 @@ a:focus {
 .user-panel {
   position: relative;
   width: 100%;
-  padding: 10px;
   overflow: hidden;
+  background: #2d3a42;
+      padding: 18px 16px;
 }
 .user-panel:before,
 .user-panel:after {
@@ -494,12 +499,14 @@ a:focus {
 .user-panel > .info > p {
   font-weight: 600;
   margin-bottom: 9px;
+  color: #fff;
 }
 .user-panel > .info > a {
   text-decoration: none;
   padding-right: 5px;
   margin-top: 3px;
   font-size: 11px;
+  color: #999;
 }
 .user-panel > .info > a > .fa,
 .user-panel > .info > a > .ion,
@@ -510,6 +517,7 @@ a:focus {
   list-style: none;
   margin: 0;
   padding: 0;
+      
 }
 .sidebar-menu > li {
   position: relative;
@@ -940,7 +948,7 @@ a:focus {
 .navbar-nav > .notifications-menu > .dropdown-menu,
 .navbar-nav > .messages-menu > .dropdown-menu,
 .navbar-nav > .tasks-menu > .dropdown-menu {
-  width: 280px;
+  width: 180px;
   padding: 0 0 0 0;
   margin: 0;
   top: 100%;
@@ -1031,8 +1039,6 @@ a:focus {
 }
 .navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a > div > img {
   margin: auto 10px auto auto;
-  width: 40px;
-  height: 40px;
 }
 .navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a > h4 {
   padding: 0;
@@ -2424,9 +2430,27 @@ a:focus {
 .nav > li > a:hover,
 .nav > li > a:active,
 .nav > li > a:focus {
-  color: #444;
-  background: #f7f7f7;
+  color: #fff;
+  background-color: rgba(0,0,0,.03);
+  border-left: 1px solid hsla(0,0%,100%,.1);
 }
+.nav > li > a{
+  background-color: rgba(0,0,0,.03);
+  border-left: 1px solid hsla(0,0%,100%,.1);
+}
+.lnc_nav ul > li > a{
+  color: #fff;
+}
+.lnc_nav ul.menu > li > a{
+  color: #555;
+}
+.lnc_nav .open>a, .lnc_nav .open>a:focus, .lnc_nav .open>a:hover {
+        background-color: rgba(0,0,0,.06);
+    border-color: hsla(0,0%,100%,.1);
+}
+
+
+
 /* NAV PILLS */
 .nav-pills > li > a {
   border-radius: 0;
@@ -3222,7 +3246,7 @@ table.text-center th {
 }
 .login-page,
 .register-page {
-  background-image: url(../images/breadcrumb_bg.jpg);
+  background-image: url(../images/breadcrumb_bg3.jpg);
   background-size: cover;
 }
 .login-box,
@@ -4926,4 +4950,45 @@ table.text-center th {
   .table-responsive > .table tr td {
     white-space: normal !important;
   }
+}
+
+
+
+.sidebar-menu>li {
+    position: relative;
+    border-top: 1px solid #3a4b55;
+}
+.sidebar-menu>li>a {
+    color: hsla(0,0%,100%,.8);
+    padding: 13px 14px 14px;
+    display: block;
+    border-left: 3px solid transparent;
+}
+.sidebar-menu li, .navigation li a {
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar-menu>li:hover>a {
+    border-left: 3px solid #43b1d6;
+    background-color: #2c3a42;
+}
+
+
+.dashboard-breadcrumb {
+    margin-top: 15px;
+}
+.breadcrumb>li>a {
+    color: #444;
+    text-decoration: none;
+    display: inline-block;
+}
+.breadcrumb {
+    float: left;
+    background: transparent;
+    margin: 10px 0;
+    font-size: 13px;
+    padding: 0;
+    border-radius: 0;
 }

@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url();?>tmp/public/css/AdminLTE.css">
+  <link rel="stylesheet" href="<?php echo base_url();?>tmp/public/css/admin_login_custom.css">
   <!-- iCheck -->
   <link rel="stylesheet" href="<?php echo base_url();?>/tmp/public/plugins/iCheck/square/blue.css">
 
@@ -30,47 +31,62 @@
     <a href=""><b>Admin</b>PANEL</a>
   </div>
   <!-- /.login-logo -->
-  <div class="login-box-body">
-    <p class="login-box-msg">Sign in to start your session</p>
+  <div class="login-wrapper">
+			    <form method="POST" action="<?php echo base_url();?>index.php?mod=login&controller=login&action=login" accept-charset="UTF-8"><input name="_token" type="hidden" value="">
+			    <div class="popup-header">
+			          <a href="#" class="pull-left"><i class="fa fa-user-secret" aria-hidden="true"></i></a>
+			        <span class="text-semibold">User Login</span>
 
-    <form action="<?php echo base_url();?>index.php?mod=login&controller=login&action=login" method="post">
-      <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Email" name="email">
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password" name="password">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-      </div>
-      <div class="row">
-        <div class="col-xs-8">
-          <div class="checkbox icheck">
-            <label>
-              <input type="checkbox"> Remember Me
-            </label>
-          </div>
-        </div>
-        <!-- /.col -->
-        <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
-        </div>
-        <!-- /.col -->
-      </div>
-    </form>
+			        <div class="btn-group pull-right">
+			            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cogs" aria-hidden="true"></i></a>
+			            <ul class="dropdown-menu icons-right dropdown-menu-right">
+			                <li>
+			                    <a href="#forgot_password_modal" data-toggle="modal">
+			                        <i class="icon-info"></i>
+			                        Forgot password
+			                    </a>
+			                </li>
+			            </ul>
+			        </div>
 
-    <div class="social-auth-links text-center">
-      <p>- OR -</p>
-      <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
-        Facebook</a>
-      <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using
-        Google+</a>
-    </div>
-    <!-- /.social-auth-links -->
+			    </div>
+			    <div class="well">
+			        <div class="form-group has-feedback">
+			            <label>Email</label>
+			            <input class="form-control form-control-solid placeholder-no-fix" placeholder="Email" name="email" type="text">
+			            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+			        </div>
 
-    <a href="#">I forgot my password</a><br>
-    <a href="#" class="text-center">Register a new membership</a>
+			        <div class="form-group has-feedback">
+			            <label>Password</label>
+			            <input class="form-control form-control-solid placeholder-no-fix" placeholder="Password" name="password" type="password" value="">
+			            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+			        </div>
 
-  </div>
+			        <div class="row form-actions">
+			            <div class="col-xs-6">
+			                <div class="checkbox checkbox-success">
+			                    <label style="padding-left:0;">
+			                        <div class="checker"><span><input class="styled" name="remember" type="checkbox" value="1"></span></div> Remember me?
+			                    </label>
+			                </div>
+			            </div>
+
+			            <div class="col-xs-6">
+			                <button type="submit" class="btn btn-warning pull-right">Sign in</button>
+			            </div>
+			        </div>
+			        <div class="form-group">
+			            <p>Or Login via Social Network</p>
+			            <div class="social-button">
+			                <a href="#" class="btn bg-light-blue btn-circle"><i class="fa fa-facebook"></i> Facebook</a>
+			                <a href="#" class="btn bg-gray btn-circle"><i class="fa fa-github"></i> Github</a>
+			                <a href="#" class="btn bg-red btn-circle"><i class="fa fa-google-plus"></i> Google</a>
+			            </div>
+			        </div>
+			    </div>
+			    </form>
+			</div>
   <!-- /.login-box-body -->
 </div>
 <!-- /.login-box -->
