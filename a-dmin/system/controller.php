@@ -46,8 +46,8 @@ class Controller{
 			}
 		}
 	}
-	public function isPost(){
-		if (isset($_POST)) {
+	public function isPost($key){
+		if (isset($_POST[$key])) {
 			return true;
 		}else{
 			return false;

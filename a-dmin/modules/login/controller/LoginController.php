@@ -10,7 +10,7 @@ class LoginController extends Controller{
 	public function index(){
 		if (isset($_SESSION['id']) || isset($_SESSION['group_id'])) redirect(base_url());
 		$this->view->data  = $this->modelUser->getAll(1);
-		if ($this->isPost()==true) {
+		if ($this->isPost('login')==true) {
 			$email = $this->input->post('email');
 			$password = md5("lnc".$this->input->post('password'));
 			if ($email==null) {

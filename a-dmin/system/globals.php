@@ -33,6 +33,7 @@ if (isset($_web['lang'])) {
 		include($file_lang);	
 	}
 }
+
 // goi ngon ngu module
 if (isset($_web['lang'])) {
 	$file_lang_mod = DIR_MODULES.$_web['uri']['mod'].'/lang/'.$_web['lang'].'/main.php';
@@ -45,7 +46,6 @@ if (isset($_web['lang'])) {
 		include($file_lang_mod);	
 	}
 }
-
 $controller = new controller();
 $bootstraps = new bootstraps();
 

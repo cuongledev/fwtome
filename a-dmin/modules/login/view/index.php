@@ -84,7 +84,7 @@
 			            </div>
 
 			            <div class="col-xs-6">
-			                <button type="submit" class="btn btn-warning pull-right">Sign in</button>
+			                <button type="submit" name="login" class="btn btn-warning pull-right">Sign in</button>
 			            </div>
 			        </div>
 			        <div class="form-group">
