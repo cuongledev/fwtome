@@ -205,7 +205,9 @@
   </div>
      
   <?php 
-
+  $a = '[{"id":1},{"id":2,"children":[{"id":3},{"id":4}]},{"id":5,"children":[{"id":6},{"id":7}]},{"id":8},{"id":9},{"id":10},{"id":11},{"id":12}]';
+  echo "<pre>";
+  print_r(json_decode($a));
 /*require "db.class.php";
 $database = new Db();
 $my_ip = getHostByName(php_uname('n'));

@@ -4,9 +4,9 @@
       <div class="dashboard-breadcrumb">
         <div class="pull-left">
             <ol class="breadcrumb">
-            <li><a href=""><i class="fa fa-home" aria-hidden="true"></i> <?php echo lang('dashboard'); ?></a></li>
-            <li class="active"><?php echo lang('dashboard'); ?></li>
-      </ol>
+						<li><a href=""><i class="fa fa-home" aria-hidden="true"></i> <?php echo lang('dashboard'); ?></a></li>
+						<li class="active"><?php echo lang('dashboard'); ?></li>
+			</ol>
 
         </div>
         <div class="pull-right">
@@ -166,7 +166,10 @@
           </div>
           <!-- /.nav-tabs-custom -->
 
-         
+          
+
+          
+
         </section>
         <!-- /.Left col -->
         <!-- right col (We are only adding the ID to make the widgets sortable)-->
@@ -203,38 +206,3 @@
     </section>
     <!-- /.content -->
   </div>
-     
-  <?php 
-
-/*require "db.class.php";
-$database = new Db();
-$my_ip = getHostByName(php_uname('n'));
-
-$my_url = $_SERVER['PHP_SELF'];
-
-$sql = "SELECT * FROM online WHERE ip = '".$my_ip."'";
-$count = $database->count_query($sql);
-$data = array(
-  'ip'  => $my_ip,
-  'url' => $my_url,
-  'time'  => time()
-);
-if ($count>0) {
-  $where = array(
-    array('ip',$my_ip,'and'),
-        array('url',$my_url)
-  );
-  $database->update('online',$data,$where);
-}else{
-  // nếu chưa có ip trong database thì thêm địa chỉ ip mới vào
-  $database->insert('online',$data);
-
-}
-$time = time();
-$database->delete_sql("DELETE FROM online WHERE `time` + 1 < $time");
-
-// Select
-$data_ip = $database->query("SELECT * FROM online");
-
-*/
-?>
