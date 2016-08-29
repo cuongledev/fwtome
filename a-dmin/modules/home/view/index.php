@@ -4,9 +4,9 @@
       <div class="dashboard-breadcrumb">
         <div class="pull-left">
             <ol class="breadcrumb">
-						<li><a href=""><i class="fa fa-home" aria-hidden="true"></i> <?php echo lang('dashboard'); ?></a></li>
-						<li class="active"><?php echo lang('dashboard'); ?></li>
-			</ol>
+            <li><a href=""><i class="fa fa-home" aria-hidden="true"></i> <?php echo lang('dashboard'); ?></a></li>
+            <li class="active"><?php echo lang('dashboard'); ?></li>
+      </ol>
 
         </div>
         <div class="pull-right">
@@ -161,7 +161,7 @@
 
 
   <?php 
-require "db.class.php";
+/*require "db.class.php";
 $database = new Db();
 $my_ip = getHostByName(php_uname('n'));
 
@@ -191,25 +191,4 @@ $database->delete_sql("DELETE FROM online WHERE `time` + 1 < $time");
 // Select
 $data_ip = $database->query("SELECT * FROM online");
 
-
-
-
-
- ?>
- <!DOCTYPE html>
- <html>
- <head>
-  <title>online</title>
- </head>
- <body>
- <h1>User Online</h1>
- <?php 
-if (isset($data_ip) && !empty($data_ip)) {
-  echo "<pre>";
-  print_r($data_ip);
-  echo "</pre>";
-}
-
-  ?>
- </body>
- </html>
+*/
